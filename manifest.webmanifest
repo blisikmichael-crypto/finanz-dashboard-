@@ -1,0 +1,11 @@
+{
+  "name": "Finanz-Dashboard",
+  "short_name": "Finanzen",
+  "description": "Einfaches Dashboard für Einnahmen und Ausgaben",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f6f8",
+  "theme_color": "#155eef",
+  "lang": "de-DE"
+}
