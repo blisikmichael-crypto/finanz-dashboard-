@@ -1,0 +1,48 @@
+
+/* NutriScope Studio+ independent interface */
+#more-studio{--st-navy:#163c6c;--st-blue:#2c78d5}
+#more-studio .studio-hero{border:0;background:linear-gradient(135deg,#12529d 0%,#1c75d5 75%,#3b9bef 100%);color:#fff;padding:27px 22px;box-shadow:0 12px 24px #1162ba20}
+#more-studio .studio-hero small{font-size:10px;letter-spacing:1.5px;font-weight:900;color:#b6defd}
+#more-studio .studio-hero h2{font-size:24px;letter-spacing:-.7px;margin:13px 0 8px;color:#fff}
+#more-studio .studio-hero p{line-height:1.65;max-width:540px;font-size:13px;margin:0;color:#dcebff}
+#more-studio .studio-tabs{display:flex;overflow-x:auto;white-space:nowrap;gap:5px;scrollbar-width:none;margin:16px 0}
+#more-studio .studio-tabs::-webkit-scrollbar{display:none}
+#more-studio .studio-tabs button{flex:1 0 auto;font-weight:750;padding:12px 15px;border-radius:12px;font-size:12px}
+#more-studio .studio-tabs button.active{background:#216dcc;color:white}
+#more-studio .st-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#more-studio label{display:block;margin:12px 0;font-weight:650;font-size:12px}
+#more-studio input,#more-studio select,#more-studio textarea{width:100%;max-width:100%;border-radius:11px;border:1px solid #dce6ec;background:#fafdff;color:#183346;padding:12px;margin-top:6px;font-size:14px}
+#more-studio textarea{min-height:80px;resize:vertical}
+#more-studio .st-line{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 0;border-bottom:1px solid #eaf0f3}
+#more-studio .st-line:last-child{border-bottom:0}
+#more-studio .st-line>div:first-child{flex:1;min-width:0}
+#more-studio .st-line b{display:block;font-size:13px;overflow-wrap:anywhere}
+#more-studio .st-line small{display:block;color:#778898;font-size:11px;margin-top:4px;line-height:1.45}
+#more-studio .st-line>div:last-child{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+#more-studio .st-line button{background:#e7f1ff;color:#1a61ad;border:0;padding:8px 9px;font-size:11px;border-radius:8px;min-height:33px}
+#more-studio .st-line button:last-child:not(:first-child){color:#a43b3b;background:#fff1f0}
+#more-studio .st-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:15px 0 18px}
+#more-studio .st-stats>div{padding:16px;background:#eff7ff;border-radius:12px}
+#more-studio .st-stats small{display:block;font-size:11px;color:#6b8398;margin-bottom:7px}
+#more-studio .st-stats b{font-size:25px;letter-spacing:-.5px;color:#154880}
+#more-studio .st-meter{margin:13px 0}
+#more-studio .st-meter .row{font-size:12px;margin:0 0 6px}
+#more-studio h4{font-size:14px;margin:20px 0 9px}
+#more-studio .st-duo{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #edf2f4;padding:10px 0;font-size:12px}
+#more-studio .st-duo span{flex:1;overflow-wrap:anywhere}
+#more-studio .st-duo b{white-space:nowrap}
+#more-studio .st-notice{min-height:18px;font-size:12px;margin:9px 5px}
+#more-studio .st-warning{margin:0 0 17px;padding:13px 15px;border-radius:12px;background:#fff4e9;color:#98601a;font-size:12px;line-height:1.5}
+#more-studio .button{background:#1f77d1}
+#studioShortcuts{border:0}
+#studioShortcuts h3{font-size:14px}
+#studioShortcuts .st-buttons{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}
+#studioShortcuts button{border:1px solid #dfe8f5;background:#f0f6ff;color:#2172c8;font-size:25px;border-radius:13px;min-height:75px;display:flex;flex-direction:column;gap:6px;align-items:center;justify-content:center}
+#studioShortcuts button small{color:#386481;font-size:11px;font-weight:700}
+#stEntryMicros{border:1px solid #dfebef;background:#f7fcff;border-radius:11px;padding:12px 13px;margin:13px 0}
+#stEntryMicros summary{cursor:pointer;font-weight:750;font-size:13px;color:#235f92}
+#stEntryMicros .st-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
+#stEntryMicros label{font-size:11px;color:#4f6574}
+#stEntryMicros input{width:100%;border:1px solid #d9e7f0;border-radius:10px;padding:10px;margin-top:4px}
+@media(max-width:400px){#more-studio .st-grid{grid-template-columns:1fr}#studioShortcuts .st-buttons{gap:5px}#studioShortcuts button{min-height:67px;font-size:21px}#studioShortcuts button small{font-size:10px}}
+@media print{nav,.top,.studio-tabs,.st-home,.bottom-nav,.button,.soft-btn,button,#stTemplates,#stRoutines{display:none!important}body{background:white!important}#more-studio{display:block!important}#more-studio .studio-panel{display:none!important}#more-studio [data-studiopanel="reports"]{display:block!important}#more-studio .card{box-shadow:none!important;border:1px solid #aaa!important;break-inside:avoid}#page-more{display:block!important}#page-more>.page-head,#page-more>.tabs,#more-plan,#more-recipes,#more-settings,#more-advanced{display:none!important}}
