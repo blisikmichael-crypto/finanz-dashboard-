@@ -80,11 +80,12 @@ function nutritionEditor(){if(here('stEntryMicros')||!here('estimateWarning'))re
  if(saved){for(const [k,v] of Object.entries(extras))if(v!==null)saved[k]=round(v);save();refresh()}};
  here('confirmEntry').onclick=saveEntry;
 }
+function enhanceOffNutrients(){const previous=offProduct;offProduct=function(product){const food=previous(product),data=product.nutriments||{};for(const [key,names] of Object.entries({fiber:['fiber_100g','fiber'],sugar:['sugars_100g','sugars'],salt:['salt_100g','salt'],satfat:['saturated-fat_100g','saturated-fat']})){let v=null;for(const name of names){const x=Number(data[name]);if(data[name]!==undefined&&Number.isFinite(x)&&x>=0){v=x;break}}if(v!==null)food[key]=v}return food}}
 function homeShortcuts(){const home=here('page-home'),hero=home?.querySelector('.hero');if(!hero||here('studioShortcuts'))return;
  hero.insertAdjacentHTML('afterend','<div class="card st-home" id="studioShortcuts"><h3>Deine Schnellaktionen</h3><div class="st-buttons"><button data-st-short="foods">＋<small>Erfassen</small></button><button data-st-short="reports">▤<small>Bericht</small></button><button data-st-short="planning">▦<small>Planen</small></button><button data-st-short="routines">⌁<small>Training</small></button></div></div>');
  here('studioShortcuts').onclick=e=>{const b=e.target.closest('[data-st-short]');if(!b)return;const target=b.dataset.stShort;if(target==='foods'){nav('foods');return}nav('more');setTab('moretab','studio','more-');switchPanel(target)};
 }
 function renderStudio(){if(!here('more-studio'))return;const s=ensure();if(document.activeElement!==here('stNote'))here('stNote').value=s.notes[day]||'';renderTemplates();renderRoutines();renderPlanPreview();renderReport();}
-function init(){ensure();setup();nutritionEditor();homeShortcuts();const originalRefresh=refresh;refresh=function(){const v=originalRefresh();renderStudio();return v};renderStudio();}
+function init(){ensure();enhanceOffNutrients();setup();nutritionEditor();homeShortcuts();const originalRefresh=refresh;refresh=function(){const v=originalRefresh();renderStudio();return v};renderStudio();}
 document.addEventListener('DOMContentLoaded',()=>{try{init()}catch(e){console.error('NutriScope Studio:',e)}});
 })();
